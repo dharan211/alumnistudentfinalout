@@ -1,0 +1,101 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+.header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px 10%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+/* FAQ Section */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* FAQ Item Styles */
+.faq-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    cursor: pointer; /* Indicate interactivity */
+}
+
+.faq-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.faq-item h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #282c34; /* Dark color for question text */
+}
+
+.faq-item p {
+    max-height: 0; /* Initially hide the answer */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Smooth transition for the answer */
+    color: #666; /* Grey color for answer text */
+    margin: 0;
+}
+
+/* Expanded State */
+.faq-item.active p {
+    max-height: 100px; /* Expand to a reasonable height when active */
+}
+
+/* Button Styles */
+.button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #282c34; /* Change button color on hover */
+    color: #61dafb; /* Change text color on hover */
+    transform: translateY(-2px); /* Lift effect on button hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq {
+        width: 100%; /* Full width for smaller screens */
+    }
+}

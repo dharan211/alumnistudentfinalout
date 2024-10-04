@@ -1,0 +1,161 @@
+* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+.header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px 10%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+/* Profile Section */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative; /* For hover effect */
+    padding: 15px;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circle profile image */
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover .profile-img {
+    transform: scale(1.1); /* Slight zoom effect on image hover */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #282c34; /* Dark text color for names */
+}
+
+p {
+    margin: 5px 0;
+    color: #666; /* Grey color for additional info */
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat {
+    background-color: #e7f3ff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.stat h3 {
+    margin: 5px 0;
+}
+
+/* Status Update Section */
+.status-update {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e7f3ff;
+    border-radius: 10px;
+}
+
+.status-update h4 {
+    margin-bottom: 10px;
+    color: #282c34;
+}
+
+.status-update p {
+    color: #444;
+}
+
+/* Button Styles */
+.view-more {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0;
+}
+
+.view-more:hover {
+    background-color: #282c34; /* Change button color on hover */
+    color: #61dafb; /* Change text color on hover */
+    transform: translateY(-2px); /* Lift effect on button hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 90%;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat {
+        width: 100px; /* Increase width for smaller screens */
+        margin-bottom: 10px; /* Add space between stats */
+    }
+}

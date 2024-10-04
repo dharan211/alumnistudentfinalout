@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Opportunities</title>
+    <link rel="stylesheet" href="vol.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h1>VolunteerConnect</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#opportunities">Opportunities</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Volunteer and Make a Change</h1>
+        <p>Join our community of volunteers today!</p>
+    </header>
+
+    <!-- Opportunities Section with Hover Overlay Effect -->
+    <section class="cards" id="opportunities">
+        <h2>Volunteer Opportunities</h2>
+        <div class="card">
+            <img src="food-bank.jpg" alt="Food Bank">
+            <div class="card-content">
+                <h3>Food Bank</h3>
+                <p>Distribute food to those in need.</p>
+                <button class="volunteer-btn" onclick="openModal(1)">Learn More</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="cleanup.jpg" alt="Community Cleanup">
+            <div class="card-content">
+                <h3>Community Cleanup</h3>
+                <p>Help clean local parks.</p>
+                <button class="volunteer-btn" onclick="openModal(2)">Learn More</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="tutoring.jpg" alt="Tutoring">
+            <div class="card-content">
+                <h3>Tutoring Program</h3>
+                <p>Teach and inspire young learners.</p>
+                <button class="volunteer-btn" onclick="openModal(3)">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Modal Title</h2>
+            <p id="modal-body">Details about the volunteering opportunity.</p>
+        </div>
+    </div>
+
+    <script src="vol.js"></script>
+</body>
+</html>
