@@ -1,24 +1,32 @@
-<div class="login-box">
-<h2>Login</h2>
-<form action="LoginServlet" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Alumni & Student</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="LoginServlet" method="post">
                 <label for="Email id ">Email id</label>
-                <label for="username">Email id</label>
-<input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required>
 
-<label for="password">Password</label>
-@@ -23,10 +23,12 @@ <h2>Login</h2>
-<option value="alumni">Alumni</option>
-</select>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="role">Select Role</label>
+                <select id="role" name="role">
+                    <option value="student">Student</option>
+                    <option value="alumni">Alumni</option>
+                </select>
 
                 <button type="submit"><a href="home.html">login</a></button>
-                <button type="submit">Login</button>
-</form>
-</div>
-</div>
+            </form>
+        </div>
+    </div>
     <script src="supports.java"></script>
-
-    <!-- Optionally, add JavaScript for error handling or form validation -->
-    <script src="supports.js"></script>
 </body>
-</html>
 </html>
